@@ -74,7 +74,35 @@ p {
 .sect-1 {
   background: var(--Light-Grayish-Blue);
 }
-
+.head__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.ul_nav {
+  display: flex;
+  gap: 1rem;
+}
+.navbar,
+.button-w {
+  display: none;
+}
+.menu {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .button-w {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
 section {
   margin: 8rem 0;
 }

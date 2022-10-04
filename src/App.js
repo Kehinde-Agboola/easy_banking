@@ -4,7 +4,6 @@ import Header from "./component/Header";
 import Body from "./component/Body";
 import Articules from "./component/Articules";
 import Footer from "./component/Footer";
-import DeskNav from "./component/DeskNav.jsx";
 
 export const App = () => {
   return (

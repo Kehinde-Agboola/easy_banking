@@ -9,10 +9,10 @@ const Articules = () => {
       <section className="sect-2 ">
         <div className="container articule">
           <div className="heading text-center md:text-left">
-            <h1>Latest Articles</h1>
+            <h1 className="px-5">Latest Articles</h1>
           </div>
-          <div className="groups md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-5 placecontent-center text-left">
-            <article className="rounded-b-lg shadow-lg">
+          <div className="groups md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-5 placecontent-center text-left px-5">
+            <article className="rounded-b-lg shadow-lg cursor-pointer hover:scale-105">
               <img
                 src={currency}
                 alt=""
@@ -27,7 +27,7 @@ const Articules = () => {
                 why should you be forced to only receive money in a single …
               </p>
             </article>
-            <article className="rounded-b-lg shadow-lg">
+            <article className="rounded-b-lg shadow-lg cursor-pointer hover:scale-105">
               <img src={rest} alt="" className="rounded-t-lg md:object-cover" />
               <p className="p-2 px-3">By Wilson Hutton</p>
               <h3 className="pt-2 px-3 ">
@@ -38,7 +38,7 @@ const Articules = () => {
                 spending and set realistic limits each month. That means you …
               </p>
             </article>
-            <article className="rounded-b-lg shadow-lg  ">
+            <article className="rounded-b-lg shadow-lg cursor-pointer hover:scale-105">
               <img
                 src={plane}
                 alt=""
@@ -53,7 +53,7 @@ const Articules = () => {
                 any fees on purchases while you’re abroad. We’ll even show you …
               </p>
             </article>
-            <article className="rounded-b-lg shadow-lg ">
+            <article className="rounded-b-lg shadow-lg cursor-pointer hover:scale-105">
               <img
                 src={confetti}
                 alt=""

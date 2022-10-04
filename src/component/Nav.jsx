@@ -6,62 +6,60 @@ import Navbar from "./Navbar";
 import close from "../images/icon-close.svg";
 import open from "../images/icon-open.svg";
 const Nav = () => {
-  const ShowButton = () => {
-    if (window.innerWidth >= 769) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
-  };
-  useEffect(() => {
-    // if (window.innerWidth >= width) {
-    //   setOpen(true);
-    // }
-    ShowButton();
-  }, []);
+  // const ShowButton = () => {
+  //   if (window.innerWidth >= 769) {
+  //     setOpen(false);
+  //   } else {
+  //     setOpen(true);
+  //   }
+  // };
+  // useEffect(() => {
+  //   // if (window.innerWidth >= width) {
+  //   //   setOpen(true);
+  //   // }
+  //   ShowButton();
+  // }, []);
   const [isOpen, setOpen] = useState(true);
   const [Navlinks, setnavLinks] = useState(Menu);
   return (
     <>
       <header className="absolute p-3 bg-white w-full">
-        <div className="container flex space-x-10 items-center justify-around">
-          <div>
-            <img src={logo} alt="" />
-          </div>
-          {/* Links */}
-          <nav className="navbar md:flex md:items-center md:justify-between hidden">
-            <ul className="flex justify-evenly items-center cursor-pointer gap-5">
-              {Navlinks.map(({ id, title, links }) => (
-                <li key={id}>{title}</li>
-              ))}
-            </ul>
-            <div className="ml-20 ">
-              <Buttons />
+        <div className="max-w-[1440px] mx-auto">
+          <div className="head__nav">
+            <div>
+              <img src={logo} alt="" />
             </div>
-          </nav>
-
-          <div className="sm:hidden flex flex-col items-center">
-            <img
-              src={isOpen ? close : open}
-              alt="menu"
-              className="object-contain cursor pointer"
-              onClick={() => setOpen((prev) => !prev)}
-            />
-            <div
-              className={`${
-                isOpen ? "flex" : "hidden"
-              } absolute bg-white navbar`}
-            >
-              <ul className="flex-col px-20 justify-center items-center text-center shadow-lg">
+            {/* Links */}
+            <nav className="navbar">
+              <ul className="ul_nav">
                 {Navlinks.map(({ id, title, links }) => (
-                  <li key={id} className="m-2">
-                    {title}
-                  </li>
+                  <li key={id}>{title}</li>
                 ))}
               </ul>
-              {/* <div className="mx-10">
+            </nav>
+            <div className="button-w">
+              <Buttons />
+            </div>
+
+            <div className="menu flex-col items-center">
+              <img
+                src={isOpen ? close : open}
+                alt="menu"
+                className="object-contain cursor pointer w-10"
+                onClick={() => setOpen((prev) => !prev)}
+              />
+              <div className={`${isOpen ? "flex" : "hidden"} `}>
+                <ul className="flex-col px-20 justify-center text-center shadow-lg absolute bg-white right-10  top-20 w-[80%] py-4 mt-2">
+                  {Navlinks.map(({ id, title, links }) => (
+                    <li key={id} className="">
+                      {title}
+                    </li>
+                  ))}
+                </ul>
+                {/* <div className="mx-10">
                 <Buttons />
               </div> */}
+              </div>
             </div>
           </div>
 
